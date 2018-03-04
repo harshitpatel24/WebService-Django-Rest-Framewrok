@@ -21,5 +21,6 @@ from webservice.views import ListCreatesanlp
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^api/sanlp',ListCreatesanlp.as_view(),name='list_products')
+    url(r'^api/sanlp',ListCreatesanlp.as_view(),name='list_products'),
+    url(r'^api/sanlp/product_id/+(?P<p_name>[\w|\W]+)/$',ListCreatesanlp.as_view(),name='list_products')
 ]
