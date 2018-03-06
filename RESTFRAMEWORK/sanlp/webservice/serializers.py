@@ -5,4 +5,4 @@ from webservice.models import sanlp
 class sanlpserializer(serializers.ModelSerializer):
     class Meta:
         model=sanlp
-        fields=('id','p_id','p_name')
+        fields=('id','p_id','p_name','review_detail')

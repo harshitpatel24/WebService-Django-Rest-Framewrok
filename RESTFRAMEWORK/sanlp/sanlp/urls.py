@@ -17,10 +17,12 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path
 
-from webservice.views import ListCreatesanlp
+from webservice import views
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^api/sanlp',ListCreatesanlp.as_view(),name='list_products'),
-    url(r'^api/sanlp/product_id/+(?P<p_name>[\w|\W]+)/$',ListCreatesanlp.as_view(),name='list_products')
+    #url(r'^api/sanlp',ListCreatesanlp.as_view(),name='list_products'),
+    url(r'^api/sanlp/get_product/$',views.get_product,name='list_products'),
+    url(r'^api/sanlp/all_product/$',views.all_product,name='all_products')
 ]
