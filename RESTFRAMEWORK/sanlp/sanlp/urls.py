@@ -23,6 +23,5 @@ from webservice import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     #url(r'^api/sanlp',ListCreatesanlp.as_view(),name='list_products'),
-    url(r'^api/sanlp/get_product/$',views.get_product,name='list_products'),
-    url(r'^api/sanlp/all_product/$',views.all_product,name='all_products')
+    url(r'^api/sanlp/get_product$',views.get_product,name='list_products'),
 ]

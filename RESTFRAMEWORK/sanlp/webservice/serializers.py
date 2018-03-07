@@ -6,3 +6,7 @@ class sanlpserializer(serializers.ModelSerializer):
     class Meta:
         model=sanlp
         fields=('id','p_id','p_name','review_detail')
+
+class emptyserializer(serializers.ModelSerializer):
+    class Meta:
+        model=sanlp
